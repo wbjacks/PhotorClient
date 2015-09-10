@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		59F6A3191B6F318300BE676E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F6A3181B6F318300BE676E /* AppDelegate.swift */; };
+		59F6A31C1B6F318300BE676E /* PhotorClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 59F6A31A1B6F318300BE676E /* PhotorClient.xcdatamodeld */; };
+		59F6A31E1B6F318300BE676E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F6A31D1B6F318300BE676E /* ViewController.swift */; };
+		59F6A3211B6F318300BE676E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59F6A31F1B6F318300BE676E /* Main.storyboard */; };
+		59F6A3231B6F318300BE676E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59F6A3221B6F318300BE676E /* Images.xcassets */; };
+		59F6A3261B6F318300BE676E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59F6A3241B6F318300BE676E /* LaunchScreen.xib */; };
+		59F6A3321B6F318300BE676E /* PhotorClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F6A3311B6F318300BE676E /* PhotorClientTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		59F6A32C1B6F318300BE676E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59F6A30B1B6F318300BE676E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59F6A3121B6F318300BE676E;
+			remoteInfo = PhotorClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		59F6A3131B6F318300BE676E /* PhotorClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotorClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		59F6A3171B6F318300BE676E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59F6A3181B6F318300BE676E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		59F6A31B1B6F318300BE676E /* PhotorClient.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PhotorClient.xcdatamodel; sourceTree = "<group>"; };
+		59F6A31D1B6F318300BE676E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		59F6A3201B6F318300BE676E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		59F6A3221B6F318300BE676E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		59F6A3251B6F318300BE676E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		59F6A32B1B6F318300BE676E /* PhotorClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotorClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		59F6A3301B6F318300BE676E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59F6A3311B6F318300BE676E /* PhotorClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotorClientTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		59F6A3101B6F318300BE676E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59F6A3281B6F318300BE676E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		59F6A30A1B6F318300BE676E = {
+			isa = PBXGroup;
+			children = (
+				59F6A3151B6F318300BE676E /* PhotorClient */,
+				59F6A32E1B6F318300BE676E /* PhotorClientTests */,
+				59F6A3141B6F318300BE676E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		59F6A3141B6F318300BE676E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				59F6A3131B6F318300BE676E /* PhotorClient.app */,
+				59F6A32B1B6F318300BE676E /* PhotorClientTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		59F6A3151B6F318300BE676E /* PhotorClient */ = {
+			isa = PBXGroup;
+			children = (
+				59F6A3181B6F318300BE676E /* AppDelegate.swift */,
+				59F6A31D1B6F318300BE676E /* ViewController.swift */,
+				59F6A31F1B6F318300BE676E /* Main.storyboard */,
+				59F6A3221B6F318300BE676E /* Images.xcassets */,
+				59F6A3241B6F318300BE676E /* LaunchScreen.xib */,
+				59F6A31A1B6F318300BE676E /* PhotorClient.xcdatamodeld */,
+				59F6A3161B6F318300BE676E /* Supporting Files */,
+			);
+			path = PhotorClient;
+			sourceTree = "<group>";
+		};
+		59F6A3161B6F318300BE676E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				59F6A3171B6F318300BE676E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		59F6A32E1B6F318300BE676E /* PhotorClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				59F6A3311B6F318300BE676E /* PhotorClientTests.swift */,
+				59F6A32F1B6F318300BE676E /* Supporting Files */,
+			);
+			path = PhotorClientTests;
+			sourceTree = "<group>";
+		};
+		59F6A32F1B6F318300BE676E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				59F6A3301B6F318300BE676E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		59F6A3121B6F318300BE676E /* PhotorClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59F6A3351B6F318300BE676E /* Build configuration list for PBXNativeTarget "PhotorClient" */;
+			buildPhases = (
+				59F6A30F1B6F318300BE676E /* Sources */,
+				59F6A3101B6F318300BE676E /* Frameworks */,
+				59F6A3111B6F318300BE676E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhotorClient;
+			productName = PhotorClient;
+			productReference = 59F6A3131B6F318300BE676E /* PhotorClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+		59F6A32A1B6F318300BE676E /* PhotorClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59F6A3381B6F318300BE676E /* Build configuration list for PBXNativeTarget "PhotorClientTests" */;
+			buildPhases = (
+				59F6A3271B6F318300BE676E /* Sources */,
+				59F6A3281B6F318300BE676E /* Frameworks */,
+				59F6A3291B6F318300BE676E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59F6A32D1B6F318300BE676E /* PBXTargetDependency */,
+			);
+			name = PhotorClientTests;
+			productName = PhotorClientTests;
+			productReference = 59F6A32B1B6F318300BE676E /* PhotorClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		59F6A30B1B6F318300BE676E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Will Jackson";
+				TargetAttributes = {
+					59F6A3121B6F318300BE676E = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					59F6A32A1B6F318300BE676E = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 59F6A3121B6F318300BE676E;
+					};
+				};
+			};
+			buildConfigurationList = 59F6A30E1B6F318300BE676E /* Build configuration list for PBXProject "PhotorClient" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 59F6A30A1B6F318300BE676E;
+			productRefGroup = 59F6A3141B6F318300BE676E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				59F6A3121B6F318300BE676E /* PhotorClient */,
+				59F6A32A1B6F318300BE676E /* PhotorClientTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		59F6A3111B6F318300BE676E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59F6A3211B6F318300BE676E /* Main.storyboard in Resources */,
+				59F6A3261B6F318300BE676E /* LaunchScreen.xib in Resources */,
+				59F6A3231B6F318300BE676E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59F6A3291B6F318300BE676E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		59F6A30F1B6F318300BE676E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59F6A31E1B6F318300BE676E /* ViewController.swift in Sources */,
+				59F6A31C1B6F318300BE676E /* PhotorClient.xcdatamodeld in Sources */,
+				59F6A3191B6F318300BE676E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59F6A3271B6F318300BE676E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59F6A3321B6F318300BE676E /* PhotorClientTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		59F6A32D1B6F318300BE676E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 59F6A3121B6F318300BE676E /* PhotorClient */;
+			targetProxy = 59F6A32C1B6F318300BE676E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		59F6A31F1B6F318300BE676E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59F6A3201B6F318300BE676E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		59F6A3241B6F318300BE676E /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59F6A3251B6F318300BE676E /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		59F6A3331B6F318300BE676E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		59F6A3341B6F318300BE676E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		59F6A3361B6F318300BE676E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PhotorClient/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		59F6A3371B6F318300BE676E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PhotorClient/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		59F6A3391B6F318300BE676E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PhotorClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotorClient.app/PhotorClient";
+			};
+			name = Debug;
+		};
+		59F6A33A1B6F318300BE676E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PhotorClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotorClient.app/PhotorClient";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		59F6A30E1B6F318300BE676E /* Build configuration list for PBXProject "PhotorClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59F6A3331B6F318300BE676E /* Debug */,
+				59F6A3341B6F318300BE676E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59F6A3351B6F318300BE676E /* Build configuration list for PBXNativeTarget "PhotorClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59F6A3361B6F318300BE676E /* Debug */,
+				59F6A3371B6F318300BE676E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		59F6A3381B6F318300BE676E /* Build configuration list for PBXNativeTarget "PhotorClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59F6A3391B6F318300BE676E /* Debug */,
+				59F6A33A1B6F318300BE676E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		59F6A31A1B6F318300BE676E /* PhotorClient.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				59F6A31B1B6F318300BE676E /* PhotorClient.xcdatamodel */,
+			);
+			currentVersion = 59F6A31B1B6F318300BE676E /* PhotorClient.xcdatamodel */;
+			path = PhotorClient.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 59F6A30B1B6F318300BE676E /* Project object */;
+}
