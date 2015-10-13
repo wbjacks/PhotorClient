@@ -2,12 +2,12 @@
 //  PhotorClientTests.swift
 //  PhotorClientTests
 //
-//  Created by Will Jackson on 8/2/15.
-//  Copyright (c) 2015 Will Jackson. All rights reserved.
+//  Created by Will Jackson on 10/12/27 H.
+//  Copyright © 27 Heisei Will Jackson. All rights reserved.
 //
 
-import UIKit
 import XCTest
+@testable import PhotorClient
 
 class PhotorClientTests: XCTestCase {
     
@@ -23,12 +23,12 @@ class PhotorClientTests: XCTestCase {
     
     func testExample() {
         // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock() {
+        self.measureBlock {
             // Put the code you want to measure the time of here.
         }
     }

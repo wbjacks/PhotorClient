@@ -7,54 +7,66 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		593268D71BCCD0C2002AD19D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593268D51BCCD0C2002AD19D /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
-		593268D81BCCD0C2002AD19D /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593268D61BCCD0C2002AD19D /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
-		59F6A3191B6F318300BE676E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F6A3181B6F318300BE676E /* AppDelegate.swift */; };
-		59F6A31C1B6F318300BE676E /* PhotorClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 59F6A31A1B6F318300BE676E /* PhotorClient.xcdatamodeld */; };
-		59F6A31E1B6F318300BE676E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F6A31D1B6F318300BE676E /* ViewController.swift */; };
-		59F6A3211B6F318300BE676E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59F6A31F1B6F318300BE676E /* Main.storyboard */; };
-		59F6A3231B6F318300BE676E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59F6A3221B6F318300BE676E /* Images.xcassets */; };
-		59F6A3261B6F318300BE676E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59F6A3241B6F318300BE676E /* LaunchScreen.xib */; };
-		59F6A3321B6F318300BE676E /* PhotorClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F6A3311B6F318300BE676E /* PhotorClientTests.swift */; };
+		593268E81BCCD332002AD19D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593268E71BCCD332002AD19D /* AppDelegate.swift */; };
+		593268EA1BCCD332002AD19D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593268E91BCCD332002AD19D /* ViewController.swift */; };
+		593268ED1BCCD332002AD19D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 593268EB1BCCD332002AD19D /* Main.storyboard */; };
+		593268F01BCCD332002AD19D /* PhotorClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 593268EE1BCCD332002AD19D /* PhotorClient.xcdatamodeld */; };
+		593268F21BCCD332002AD19D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 593268F11BCCD332002AD19D /* Assets.xcassets */; };
+		593268F51BCCD332002AD19D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 593268F31BCCD332002AD19D /* LaunchScreen.storyboard */; };
+		593269001BCCD332002AD19D /* PhotorClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593268FF1BCCD332002AD19D /* PhotorClientTests.swift */; };
+		5932690B1BCCD332002AD19D /* PhotorClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5932690A1BCCD332002AD19D /* PhotorClientUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		59F6A32C1B6F318300BE676E /* PBXContainerItemProxy */ = {
+		593268FC1BCCD332002AD19D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 59F6A30B1B6F318300BE676E /* Project object */;
+			containerPortal = 593268DC1BCCD332002AD19D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 59F6A3121B6F318300BE676E;
+			remoteGlobalIDString = 593268E31BCCD332002AD19D;
+			remoteInfo = PhotorClient;
+		};
+		593269071BCCD332002AD19D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 593268DC1BCCD332002AD19D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 593268E31BCCD332002AD19D;
 			remoteInfo = PhotorClient;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		593268D51BCCD0C2002AD19D /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		593268D61BCCD0C2002AD19D /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		59F6A3131B6F318300BE676E /* PhotorClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotorClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		59F6A3171B6F318300BE676E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		59F6A3181B6F318300BE676E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		59F6A31B1B6F318300BE676E /* PhotorClient.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PhotorClient.xcdatamodel; sourceTree = "<group>"; };
-		59F6A31D1B6F318300BE676E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		59F6A3201B6F318300BE676E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		59F6A3221B6F318300BE676E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		59F6A3251B6F318300BE676E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		59F6A32B1B6F318300BE676E /* PhotorClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotorClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		59F6A3301B6F318300BE676E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		59F6A3311B6F318300BE676E /* PhotorClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotorClientTests.swift; sourceTree = "<group>"; };
+		593268E41BCCD332002AD19D /* PhotorClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotorClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		593268E71BCCD332002AD19D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		593268E91BCCD332002AD19D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		593268EC1BCCD332002AD19D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		593268EF1BCCD332002AD19D /* PhotorClient.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PhotorClient.xcdatamodel; sourceTree = "<group>"; };
+		593268F11BCCD332002AD19D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		593268F41BCCD332002AD19D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		593268F61BCCD332002AD19D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		593268FB1BCCD332002AD19D /* PhotorClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotorClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		593268FF1BCCD332002AD19D /* PhotorClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotorClientTests.swift; sourceTree = "<group>"; };
+		593269011BCCD332002AD19D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		593269061BCCD332002AD19D /* PhotorClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotorClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5932690A1BCCD332002AD19D /* PhotorClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotorClientUITests.swift; sourceTree = "<group>"; };
+		5932690C1BCCD332002AD19D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		59F6A3101B6F318300BE676E /* Frameworks */ = {
+		593268E11BCCD332002AD19D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				593268D81BCCD0C2002AD19D /* FBSDKLoginKit.framework in Frameworks */,
-				593268D71BCCD0C2002AD19D /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		59F6A3281B6F318300BE676E /* Frameworks */ = {
+		593268F81BCCD332002AD19D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		593269031BCCD332002AD19D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -64,84 +76,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		593268D01BCCCE56002AD19D /* Frameworks */ = {
+		593268DB1BCCD332002AD19D = {
 			isa = PBXGroup;
 			children = (
-				593268D51BCCD0C2002AD19D /* FBSDKCoreKit.framework */,
-				593268D61BCCD0C2002AD19D /* FBSDKLoginKit.framework */,
-			);
-			name = Frameworks;
-			path = PhotorClient;
-			sourceTree = "<group>";
-		};
-		59F6A30A1B6F318300BE676E = {
-			isa = PBXGroup;
-			children = (
-				593268D01BCCCE56002AD19D /* Frameworks */,
-				59F6A3151B6F318300BE676E /* PhotorClient */,
-				59F6A32E1B6F318300BE676E /* PhotorClientTests */,
-				59F6A3141B6F318300BE676E /* Products */,
+				593268E61BCCD332002AD19D /* PhotorClient */,
+				593268FE1BCCD332002AD19D /* PhotorClientTests */,
+				593269091BCCD332002AD19D /* PhotorClientUITests */,
+				593268E51BCCD332002AD19D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		59F6A3141B6F318300BE676E /* Products */ = {
+		593268E51BCCD332002AD19D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				59F6A3131B6F318300BE676E /* PhotorClient.app */,
-				59F6A32B1B6F318300BE676E /* PhotorClientTests.xctest */,
+				593268E41BCCD332002AD19D /* PhotorClient.app */,
+				593268FB1BCCD332002AD19D /* PhotorClientTests.xctest */,
+				593269061BCCD332002AD19D /* PhotorClientUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		59F6A3151B6F318300BE676E /* PhotorClient */ = {
+		593268E61BCCD332002AD19D /* PhotorClient */ = {
 			isa = PBXGroup;
 			children = (
-				59F6A3181B6F318300BE676E /* AppDelegate.swift */,
-				59F6A31D1B6F318300BE676E /* ViewController.swift */,
-				59F6A31F1B6F318300BE676E /* Main.storyboard */,
-				59F6A3221B6F318300BE676E /* Images.xcassets */,
-				59F6A3241B6F318300BE676E /* LaunchScreen.xib */,
-				59F6A31A1B6F318300BE676E /* PhotorClient.xcdatamodeld */,
-				59F6A3161B6F318300BE676E /* Supporting Files */,
+				593268E71BCCD332002AD19D /* AppDelegate.swift */,
+				593268E91BCCD332002AD19D /* ViewController.swift */,
+				593268EB1BCCD332002AD19D /* Main.storyboard */,
+				593268F11BCCD332002AD19D /* Assets.xcassets */,
+				593268F31BCCD332002AD19D /* LaunchScreen.storyboard */,
+				593268F61BCCD332002AD19D /* Info.plist */,
+				593268EE1BCCD332002AD19D /* PhotorClient.xcdatamodeld */,
 			);
 			path = PhotorClient;
 			sourceTree = "<group>";
 		};
-		59F6A3161B6F318300BE676E /* Supporting Files */ = {
+		593268FE1BCCD332002AD19D /* PhotorClientTests */ = {
 			isa = PBXGroup;
 			children = (
-				59F6A3171B6F318300BE676E /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		59F6A32E1B6F318300BE676E /* PhotorClientTests */ = {
-			isa = PBXGroup;
-			children = (
-				59F6A3311B6F318300BE676E /* PhotorClientTests.swift */,
-				59F6A32F1B6F318300BE676E /* Supporting Files */,
+				593268FF1BCCD332002AD19D /* PhotorClientTests.swift */,
+				593269011BCCD332002AD19D /* Info.plist */,
 			);
 			path = PhotorClientTests;
 			sourceTree = "<group>";
 		};
-		59F6A32F1B6F318300BE676E /* Supporting Files */ = {
+		593269091BCCD332002AD19D /* PhotorClientUITests */ = {
 			isa = PBXGroup;
 			children = (
-				59F6A3301B6F318300BE676E /* Info.plist */,
+				5932690A1BCCD332002AD19D /* PhotorClientUITests.swift */,
+				5932690C1BCCD332002AD19D /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = PhotorClientUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		59F6A3121B6F318300BE676E /* PhotorClient */ = {
+		593268E31BCCD332002AD19D /* PhotorClient */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 59F6A3351B6F318300BE676E /* Build configuration list for PBXNativeTarget "PhotorClient" */;
+			buildConfigurationList = 5932690F1BCCD332002AD19D /* Build configuration list for PBXNativeTarget "PhotorClient" */;
 			buildPhases = (
-				59F6A30F1B6F318300BE676E /* Sources */,
-				59F6A3101B6F318300BE676E /* Frameworks */,
-				59F6A3111B6F318300BE676E /* Resources */,
+				593268E01BCCD332002AD19D /* Sources */,
+				593268E11BCCD332002AD19D /* Frameworks */,
+				593268E21BCCD332002AD19D /* Resources */,
 			);
 			buildRules = (
 			);
@@ -149,48 +145,68 @@
 			);
 			name = PhotorClient;
 			productName = PhotorClient;
-			productReference = 59F6A3131B6F318300BE676E /* PhotorClient.app */;
+			productReference = 593268E41BCCD332002AD19D /* PhotorClient.app */;
 			productType = "com.apple.product-type.application";
 		};
-		59F6A32A1B6F318300BE676E /* PhotorClientTests */ = {
+		593268FA1BCCD332002AD19D /* PhotorClientTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 59F6A3381B6F318300BE676E /* Build configuration list for PBXNativeTarget "PhotorClientTests" */;
+			buildConfigurationList = 593269121BCCD332002AD19D /* Build configuration list for PBXNativeTarget "PhotorClientTests" */;
 			buildPhases = (
-				59F6A3271B6F318300BE676E /* Sources */,
-				59F6A3281B6F318300BE676E /* Frameworks */,
-				59F6A3291B6F318300BE676E /* Resources */,
+				593268F71BCCD332002AD19D /* Sources */,
+				593268F81BCCD332002AD19D /* Frameworks */,
+				593268F91BCCD332002AD19D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				59F6A32D1B6F318300BE676E /* PBXTargetDependency */,
+				593268FD1BCCD332002AD19D /* PBXTargetDependency */,
 			);
 			name = PhotorClientTests;
 			productName = PhotorClientTests;
-			productReference = 59F6A32B1B6F318300BE676E /* PhotorClientTests.xctest */;
+			productReference = 593268FB1BCCD332002AD19D /* PhotorClientTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		593269051BCCD332002AD19D /* PhotorClientUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 593269151BCCD332002AD19D /* Build configuration list for PBXNativeTarget "PhotorClientUITests" */;
+			buildPhases = (
+				593269021BCCD332002AD19D /* Sources */,
+				593269031BCCD332002AD19D /* Frameworks */,
+				593269041BCCD332002AD19D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				593269081BCCD332002AD19D /* PBXTargetDependency */,
+			);
+			name = PhotorClientUITests;
+			productName = PhotorClientUITests;
+			productReference = 593269061BCCD332002AD19D /* PhotorClientUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		59F6A30B1B6F318300BE676E /* Project object */ = {
+		593268DC1BCCD332002AD19D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftMigration = 0700;
-				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Will Jackson";
 				TargetAttributes = {
-					59F6A3121B6F318300BE676E = {
-						CreatedOnToolsVersion = 6.4;
+					593268E31BCCD332002AD19D = {
+						CreatedOnToolsVersion = 7.0.1;
 					};
-					59F6A32A1B6F318300BE676E = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = 59F6A3121B6F318300BE676E;
+					593268FA1BCCD332002AD19D = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 593268E31BCCD332002AD19D;
+					};
+					593269051BCCD332002AD19D = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 593268E31BCCD332002AD19D;
 					};
 				};
 			};
-			buildConfigurationList = 59F6A30E1B6F318300BE676E /* Build configuration list for PBXProject "PhotorClient" */;
+			buildConfigurationList = 593268DF1BCCD332002AD19D /* Build configuration list for PBXProject "PhotorClient" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -198,29 +214,37 @@
 				en,
 				Base,
 			);
-			mainGroup = 59F6A30A1B6F318300BE676E;
-			productRefGroup = 59F6A3141B6F318300BE676E /* Products */;
+			mainGroup = 593268DB1BCCD332002AD19D;
+			productRefGroup = 593268E51BCCD332002AD19D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				59F6A3121B6F318300BE676E /* PhotorClient */,
-				59F6A32A1B6F318300BE676E /* PhotorClientTests */,
+				593268E31BCCD332002AD19D /* PhotorClient */,
+				593268FA1BCCD332002AD19D /* PhotorClientTests */,
+				593269051BCCD332002AD19D /* PhotorClientUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		59F6A3111B6F318300BE676E /* Resources */ = {
+		593268E21BCCD332002AD19D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59F6A3211B6F318300BE676E /* Main.storyboard in Resources */,
-				59F6A3261B6F318300BE676E /* LaunchScreen.xib in Resources */,
-				59F6A3231B6F318300BE676E /* Images.xcassets in Resources */,
+				593268F51BCCD332002AD19D /* LaunchScreen.storyboard in Resources */,
+				593268F21BCCD332002AD19D /* Assets.xcassets in Resources */,
+				593268ED1BCCD332002AD19D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		59F6A3291B6F318300BE676E /* Resources */ = {
+		593268F91BCCD332002AD19D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		593269041BCCD332002AD19D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -230,55 +254,68 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		59F6A30F1B6F318300BE676E /* Sources */ = {
+		593268E01BCCD332002AD19D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59F6A31E1B6F318300BE676E /* ViewController.swift in Sources */,
-				59F6A31C1B6F318300BE676E /* PhotorClient.xcdatamodeld in Sources */,
-				59F6A3191B6F318300BE676E /* AppDelegate.swift in Sources */,
+				593268EA1BCCD332002AD19D /* ViewController.swift in Sources */,
+				593268E81BCCD332002AD19D /* AppDelegate.swift in Sources */,
+				593268F01BCCD332002AD19D /* PhotorClient.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		59F6A3271B6F318300BE676E /* Sources */ = {
+		593268F71BCCD332002AD19D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59F6A3321B6F318300BE676E /* PhotorClientTests.swift in Sources */,
+				593269001BCCD332002AD19D /* PhotorClientTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		593269021BCCD332002AD19D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5932690B1BCCD332002AD19D /* PhotorClientUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		59F6A32D1B6F318300BE676E /* PBXTargetDependency */ = {
+		593268FD1BCCD332002AD19D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 59F6A3121B6F318300BE676E /* PhotorClient */;
-			targetProxy = 59F6A32C1B6F318300BE676E /* PBXContainerItemProxy */;
+			target = 593268E31BCCD332002AD19D /* PhotorClient */;
+			targetProxy = 593268FC1BCCD332002AD19D /* PBXContainerItemProxy */;
+		};
+		593269081BCCD332002AD19D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 593268E31BCCD332002AD19D /* PhotorClient */;
+			targetProxy = 593269071BCCD332002AD19D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		59F6A31F1B6F318300BE676E /* Main.storyboard */ = {
+		593268EB1BCCD332002AD19D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				59F6A3201B6F318300BE676E /* Base */,
+				593268EC1BCCD332002AD19D /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		59F6A3241B6F318300BE676E /* LaunchScreen.xib */ = {
+		593268F31BCCD332002AD19D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				59F6A3251B6F318300BE676E /* Base */,
+				593268F41BCCD332002AD19D /* Base */,
 			);
-			name = LaunchScreen.xib;
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		59F6A3331B6F318300BE676E /* Debug */ = {
+		5932690D1BCCD332002AD19D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -297,7 +334,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -308,14 +345,13 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -323,7 +359,7 @@
 			};
 			name = Debug;
 		};
-		59F6A3341B6F318300BE676E /* Release */ = {
+		5932690E1BCCD332002AD19D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -353,117 +389,133 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		59F6A3361B6F318300BE676E /* Debug */ = {
+		593269101BCCD332002AD19D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PhotorClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.herokuapp.obscurespire6277.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.herokuapp.obscurespire6277.PhotorClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
-		59F6A3371B6F318300BE676E /* Release */ = {
+		593269111BCCD332002AD19D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PhotorClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.herokuapp.obscurespire6277.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.herokuapp.obscurespire6277.PhotorClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
-		59F6A3391B6F318300BE676E /* Debug */ = {
+		593269131BCCD332002AD19D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = PhotorClientTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.herokuapp.obscurespire6277.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.herokuapp.obscurespire6277.PhotorClientTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotorClient.app/PhotorClient";
 			};
 			name = Debug;
 		};
-		59F6A33A1B6F318300BE676E /* Release */ = {
+		593269141BCCD332002AD19D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = PhotorClientTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.herokuapp.obscurespire6277.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.herokuapp.obscurespire6277.PhotorClientTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotorClient.app/PhotorClient";
+			};
+			name = Release;
+		};
+		593269161BCCD332002AD19D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PhotorClientUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.herokuapp.obscurespire6277.PhotorClientUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PhotorClient;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		593269171BCCD332002AD19D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PhotorClientUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.herokuapp.obscurespire6277.PhotorClientUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PhotorClient;
+				USES_XCTRUNNER = YES;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		59F6A30E1B6F318300BE676E /* Build configuration list for PBXProject "PhotorClient" */ = {
+		593268DF1BCCD332002AD19D /* Build configuration list for PBXProject "PhotorClient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				59F6A3331B6F318300BE676E /* Debug */,
-				59F6A3341B6F318300BE676E /* Release */,
+				5932690D1BCCD332002AD19D /* Debug */,
+				5932690E1BCCD332002AD19D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		59F6A3351B6F318300BE676E /* Build configuration list for PBXNativeTarget "PhotorClient" */ = {
+		5932690F1BCCD332002AD19D /* Build configuration list for PBXNativeTarget "PhotorClient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				59F6A3361B6F318300BE676E /* Debug */,
-				59F6A3371B6F318300BE676E /* Release */,
+				593269101BCCD332002AD19D /* Debug */,
+				593269111BCCD332002AD19D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		59F6A3381B6F318300BE676E /* Build configuration list for PBXNativeTarget "PhotorClientTests" */ = {
+		593269121BCCD332002AD19D /* Build configuration list for PBXNativeTarget "PhotorClientTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				59F6A3391B6F318300BE676E /* Debug */,
-				59F6A33A1B6F318300BE676E /* Release */,
+				593269131BCCD332002AD19D /* Debug */,
+				593269141BCCD332002AD19D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+		};
+		593269151BCCD332002AD19D /* Build configuration list for PBXNativeTarget "PhotorClientUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				593269161BCCD332002AD19D /* Debug */,
+				593269171BCCD332002AD19D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		59F6A31A1B6F318300BE676E /* PhotorClient.xcdatamodeld */ = {
+		593268EE1BCCD332002AD19D /* PhotorClient.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				59F6A31B1B6F318300BE676E /* PhotorClient.xcdatamodel */,
+				593268EF1BCCD332002AD19D /* PhotorClient.xcdatamodel */,
 			);
-			currentVersion = 59F6A31B1B6F318300BE676E /* PhotorClient.xcdatamodel */;
+			currentVersion = 593268EF1BCCD332002AD19D /* PhotorClient.xcdatamodel */;
 			path = PhotorClient.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 59F6A30B1B6F318300BE676E /* Project object */;
+	rootObject = 593268DC1BCCD332002AD19D /* Project object */;
 }
