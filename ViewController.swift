@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         spinner.hidden = false
         let urlString = "http://localhost:4567/"
         let url = NSURL(string: urlString)
-        var request = NSMutableURLRequest(URL: url!)
+        let request = NSMutableURLRequest(URL: url!)
         sendGetRequest(request) { (data, error) -> Void in
             self.spinner.hidden = true
             self.label.hidden = false
@@ -47,9 +47,11 @@ class ViewController: UIViewController {
                 callback("", (error!.localizedDescription) as String)
             }
             else {
+                /*
                 var result = NSString(data: data, encoding:
                     NSASCIIStringEncoding)!
                 callback(result as String, nil)
+                */
             }
         }
         task.resume()
