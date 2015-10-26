@@ -9,6 +9,7 @@
 import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
+import Alamofire
 
 class ViewController: UIViewController, FBSDKLoginButtonDelegate {
 
@@ -37,7 +38,15 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         if (error == nil) {
             print("login complete");
             // TODO: (wbjacks) send login to BE
-            self.performSegueWithIdentifier("showNew", sender: self)
+            Alamofire.request(.GET, "http://localhost:4567/user/" + result.token.userID + "/login/" + result.token.tokenString).responseData { response in
+                    switch(response.result) {
+                        case .Success(_):
+                            print("User " + result.token.userID + " logged in with short token " + result.token.tokenString);
+                        case .Failure(_):
+                            print("User failed to log in")
+                    }
+                    self.performSegueWithIdentifier("showNew", sender: self)
+                }
         }
         else {
             print(error.localizedDescription);
