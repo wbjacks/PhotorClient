@@ -15,6 +15,8 @@
 		593268F51BCCD332002AD19D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 593268F31BCCD332002AD19D /* LaunchScreen.storyboard */; };
 		593269001BCCD332002AD19D /* PhotorClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593268FF1BCCD332002AD19D /* PhotorClientTests.swift */; };
 		5932690B1BCCD332002AD19D /* PhotorClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5932690A1BCCD332002AD19D /* PhotorClientUITests.swift */; };
+		5932691F1BCCD5C2002AD19D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5932691D1BCCD5C2002AD19D /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
+		593269201BCCD5C2002AD19D /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5932691E1BCCD5C2002AD19D /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		593269061BCCD332002AD19D /* PhotorClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotorClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5932690A1BCCD332002AD19D /* PhotorClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotorClientUITests.swift; sourceTree = "<group>"; };
 		5932690C1BCCD332002AD19D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5932691D1BCCD5C2002AD19D /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		5932691E1BCCD5C2002AD19D /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				593269201BCCD5C2002AD19D /* FBSDKLoginKit.framework in Frameworks */,
+				5932691F1BCCD5C2002AD19D /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +85,7 @@
 		593268DB1BCCD332002AD19D = {
 			isa = PBXGroup;
 			children = (
+				593269181BCCD397002AD19D /* Frameworks */,
 				593268E61BCCD332002AD19D /* PhotorClient */,
 				593268FE1BCCD332002AD19D /* PhotorClientTests */,
 				593269091BCCD332002AD19D /* PhotorClientUITests */,
@@ -126,6 +133,15 @@
 				5932690C1BCCD332002AD19D /* Info.plist */,
 			);
 			path = PhotorClientUITests;
+			sourceTree = "<group>";
+		};
+		593269181BCCD397002AD19D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5932691D1BCCD5C2002AD19D /* FBSDKCoreKit.framework */,
+				5932691E1BCCD5C2002AD19D /* FBSDKLoginKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,6 +416,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PhotorClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.herokuapp.obscurespire6277.PhotorClient;
@@ -411,6 +431,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PhotorClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.herokuapp.obscurespire6277.PhotorClient;
