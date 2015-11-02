@@ -15,9 +15,19 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="te5-no-gzb">
+                                <rect key="frame" x="61" y="407" width="136" height="30"/>
+                                <state key="normal" title="Login With Faceboo"/>
+                                <connections>
+                                    <action selector="doFacebookLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="doc-FD-Ofs"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="facebookLoginButton" destination="te5-no-gzb" id="fis-JS-ss7"/>
                         <segue destination="hsC-dp-jyp" kind="presentation" identifier="showNew" animates="NO" id="BSx-tW-zYD"/>
                     </connections>
                 </viewController>

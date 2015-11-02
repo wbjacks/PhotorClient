@@ -22,7 +22,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-        return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
+        // Used to open URLs- open with facebook if needed
+        
+        // Check if url is actually a FB url- no need to send extra stuff to facebook
+        let isFacebookURL = url.scheme.hasPrefix("fb\(FBSDKSettings.appID())") && url.host == "authorize"
+        if isFacebookURL {
+            return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
+        }
+        return false
     }
 
     func applicationWillResignActive(application: UIApplication) {
