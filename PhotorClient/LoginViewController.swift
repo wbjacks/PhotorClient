@@ -11,24 +11,24 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 import Alamofire
 
-class ViewController: UIViewController, FBSDKLoginButtonDelegate {
-
-    override func viewDidLoad() {
+class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
+    override func viewDidAppear(animated: Bool) {
         super.viewDidLoad()
         if (FBSDKAccessToken.currentAccessToken() == nil) {
             print("Not logged in");
         }
         else {
-            print("Logged in!");
+            // Go to profile, already logged in
+            print("performing segue")
+            self.performSegueWithIdentifier("showNew", sender: self);
         }
-        
         let loginButton = FBSDKLoginButton()
         loginButton.readPermissions = ["public_profile", "email", "user_friends"]
         loginButton.center = self.view.center
         loginButton.delegate = self
         self.view.addSubview(loginButton)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -37,15 +37,16 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         if (error == nil) {
             print("login complete");
-            // TODO: (wbjacks) send login to BE
+
             Alamofire.request(.GET, "http://localhost:4567/user/" + result.token.userID + "/login/" + result.token.tokenString).responseData { response in
                     switch(response.result) {
                         case .Success(_):
                             print("User " + result.token.userID + " logged in with short token " + result.token.tokenString);
+                            self.performSegueWithIdentifier("showNew", sender: self);
                         case .Failure(_):
-                            print("User failed to log in")
+                            print("User failed to log in");
+                            // TODO: Error condition?
                     }
-                    self.performSegueWithIdentifier("showNew", sender: self)
                 }
         }
         else {
@@ -56,8 +57,5 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
         print("User logged out")
     }
-    
-    
-    
 }
 
