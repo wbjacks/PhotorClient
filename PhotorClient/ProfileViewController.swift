@@ -13,6 +13,16 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var logOutButton: UIButton!
+    @IBOutlet weak var userLabel: UILabel!
+    
+    // TODO: (wbjacks) this shouldn't be optional...
+    var activeUser: User?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad();
+        userLabel.hidden = false;
+        userLabel.text = activeUser?.handle;
+    }
     
     @IBAction func logOutButtonClicked(sender: UIButton) {
         FBSDKLoginManager().logOut();
