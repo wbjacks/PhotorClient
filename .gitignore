@@ -27,5 +27,11 @@ project.xcworkspace
 node_modules/
 npm-debug.log
 
+# Cocoapds
+Pods/
+Podfile.lock
+
+
 # Other
 *.*.swp
+PhotorClient.xcodeproj/

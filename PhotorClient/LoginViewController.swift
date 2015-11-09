@@ -10,7 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Alamofire
-import JSONHelper
+import SwiftyJSON
 
 class LoginViewController: UIViewController {
     let facebookReadPermissions = ["public_profile", "email", "user_friends"]
@@ -60,20 +60,17 @@ class LoginViewController: UIViewController {
     
     private func sendLoginRequestAndProcessResult(userId: String, _ token: String) {
         // TODO: (wjacks) assuming all permissions granted- maybe check them?
-        Alamofire.request(.GET, "http://localhost:4567/user/" + userId + "/login/" + token, headers: ["user_id": userId, "token": token]).response { _, _, data, error in
-            if (error != nil) {
-                print("User " + userId + " logged in with token " + token);
-                // TODO: (wbjacks) SEC!! check encoding in BE
-                if (data != nil) {
-                    self.activeUser <-- data!
+        Alamofire.request(.GET, "http://localhost:4567/user/" + userId + "/login/" + token, headers: ["user_id": userId, "token": token]).responseJSON { response in
+            if (response.result.isSuccess) {
+                if let data: AnyObject = response.result.value {
+                    print("User " + userId + " logged in with token " + token);
+                    // TODO: (wbjacks) SEC!! check encoding in BE
+                    self.activeUser = User(data: JSON(data))
                     self.performSegueWithIdentifier("showNew", sender: self);
-                }
-                else {
-                    print("Error parsing data.");
                 }
             }
             else {
-                print("User failed to log in");
+                print("User failed to log in with error:" + response.result.error!.description);
                 // TODO: Error condition?
             }
         }
