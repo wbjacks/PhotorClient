@@ -2,7 +2,7 @@ import Foundation
 import SwiftyJSON
 
 struct User {
-    let id: Int64 // TODO: (wbjacks) BE is long, will this be an issue?
+    let id: Int64
     let handle: String
     let createdAt: NSDate
     var firstName: String?

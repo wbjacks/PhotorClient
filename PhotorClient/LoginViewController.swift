@@ -25,19 +25,11 @@ class LoginViewController: UIViewController {
         }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning();
-        // Dispose of any resources that can be recreated.
-    }
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "showNew") {
             if (activeUser != nil) {
                 let view = segue.destinationViewController as! ProfileViewController
                 view.activeUser = activeUser
-            }
-            else {
-                // TODO: (wbjacks) cancel segue
             }
         }
     }
