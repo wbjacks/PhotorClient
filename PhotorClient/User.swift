@@ -1,5 +1,6 @@
 import Foundation
 import SwiftyJSON
+import FBSDKLoginKit
 
 struct User {
     let id: Int64
@@ -7,6 +8,12 @@ struct User {
     let createdAt: NSDate
     var firstName: String?
     var lastName: String?
+    var facebookUserId: String? {
+        return FBSDKAccessToken.currentAccessToken().userID
+    }
+    var facebookUserToken: String? {
+        return FBSDKAccessToken.currentAccessToken().tokenString
+    }
     
     init(data: JSON) {
         self.id = data["id"].int64Value // TODO: (wbjacks) right...?

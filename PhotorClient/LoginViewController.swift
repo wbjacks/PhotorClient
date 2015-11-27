@@ -6,15 +6,14 @@
 //  Copyright © 27 Heisei Will Jackson. All rights reserved.
 //
 
-import UIKit
+import Alamofire
 import FBSDKCoreKit
 import FBSDKLoginKit
-import Alamofire
 import SwiftyJSON
+import UIKit
 
 class LoginViewController: UIViewController {
     let facebookReadPermissions = ["public_profile", "email", "user_friends"]
-    var activeUser: User?
     
     @IBOutlet weak var facebookLoginButton: UIButton!
     override func viewDidAppear(animated: Bool) {
@@ -22,15 +21,6 @@ class LoginViewController: UIViewController {
         if (FBSDKAccessToken.currentAccessToken() != nil) {
             // Go to profile, already logged in
             sendLoginRequestAndProcessResult(FBSDKAccessToken.currentAccessToken().userID, FBSDKAccessToken.currentAccessToken().tokenString)
-        }
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "showNew") {
-            if (activeUser != nil) {
-                let view = segue.destinationViewController as! ProfileViewController
-                view.activeUser = activeUser
-            }
         }
     }
     
@@ -52,12 +42,12 @@ class LoginViewController: UIViewController {
     
     private func sendLoginRequestAndProcessResult(userId: String, _ token: String) {
         // TODO: (wjacks) assuming all permissions granted- maybe check them?
-        Alamofire.request(.GET, "http://localhost:4567/user/" + userId + "/login/" + token, headers: ["user_id": userId, "token": token]).responseJSON { response in
+        Alamofire.request(.POST, "http://localhost:4567/user/" + userId + "/login/" + token, headers: AppSessionVariables.sharedInstance.getSecurityHeaders()).responseJSON { response in
             if (response.result.isSuccess) {
                 if let data: AnyObject = response.result.value {
                     print("User " + userId + " logged in with token " + token);
                     // TODO: (wbjacks) SEC!! check encoding in BE
-                    self.activeUser = User(data: JSON(data))
+                    AppSessionVariables.sharedInstance.user = User(data: JSON(data))
                     self.performSegueWithIdentifier("showNew", sender: self);
                 }
             }

@@ -29,11 +29,61 @@
                     <connections>
                         <outlet property="facebookLoginButton" destination="te5-no-gzb" id="fis-JS-ss7"/>
                         <segue destination="hsC-dp-jyp" kind="presentation" identifier="showNew" animates="NO" id="BSx-tW-zYD"/>
+                        <segue destination="KKv-tT-OGA" kind="presentation" identifier="showSignIn" id="W4P-nX-Gdk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="447" y="356"/>
+            <point key="canvasLocation" x="461" y="356"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="8mv-zS-6PQ">
+            <objects>
+                <viewController id="KKv-tT-OGA" customClass="SignUpViewController" customModule="PhotorClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2k1-dj-3bI"/>
+                        <viewControllerLayoutGuide type="bottom" id="AFt-z1-YCd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oFW-Rg-Xy4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Butts butts butts!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1f-ig-zvb">
+                                <rect key="frame" x="211" y="38" width="179" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your butt is:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fD4-UU-wDk">
+                                <rect key="frame" x="178" y="105" width="92" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EJK-0B-BFS">
+                                <rect key="frame" x="278" y="96" width="145" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drh-Ec-42y">
+                                <rect key="frame" x="271" y="165" width="59" height="30"/>
+                                <state key="normal" title="&quot;Butt&quot;on"/>
+                                <connections>
+                                    <action selector="sendSignUpRequest:" destination="KKv-tT-OGA" eventType="touchUpInside" id="p6Q-o8-czM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="continueButton" destination="oFW-Rg-Xy4" id="FWA-fs-UvO"/>
+                        <outlet property="handleField" destination="EJK-0B-BFS" id="HKh-Z6-yfa"/>
+                        <segue destination="hsC-dp-jyp" kind="presentation" identifier="showProfile" id="Axr-Yn-xWD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bNf-ik-FSW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1036" y="1201"/>
         </scene>
         <!--ProfileViewController-->
         <scene sceneID="uSu-ha-XGI">
@@ -94,7 +144,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0UC-sD-H8w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1180" y="356"/>
+            <point key="canvasLocation" x="1509" y="356"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Axr-Yn-xWD"/>
+    </inferredMetricsTieBreakers>
 </document>
