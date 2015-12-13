@@ -72,7 +72,9 @@ class LoginViewController: UIViewController {
             }
             else {
                 print("User failed to log in with error:" + response.result.error!.description);
-                // TODO: Error condition?
+                if (response.response?.statusCode == 401) {
+                    self.performSegueWithIdentifier("showSignUp", sender: self)
+                }
             }
         }
     }
