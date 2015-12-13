@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		590BFDAD1C06DF6800E4BA0B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590BFDAC1C06DF6800E4BA0B /* User.swift */; };
+		590BFDB11C06E01E00E4BA0B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590BFDB01C06E01E00E4BA0B /* SignUpViewController.swift */; };
+		590BFDB51C07F05000E4BA0B /* AppSessionVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590BFDB41C07F05000E4BA0B /* AppSessionVariables.swift */; };
 		593268E81BCCD332002AD19D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593268E71BCCD332002AD19D /* AppDelegate.swift */; };
 		593268EA1BCCD332002AD19D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593268E91BCCD332002AD19D /* LoginViewController.swift */; };
 		593268ED1BCCD332002AD19D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 593268EB1BCCD332002AD19D /* Main.storyboard */; };
@@ -15,9 +18,9 @@
 		593268F51BCCD332002AD19D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 593268F31BCCD332002AD19D /* LaunchScreen.storyboard */; };
 		593269001BCCD332002AD19D /* PhotorClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593268FF1BCCD332002AD19D /* PhotorClientTests.swift */; };
 		5932690B1BCCD332002AD19D /* PhotorClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5932690A1BCCD332002AD19D /* PhotorClientUITests.swift */; };
-		5932691F1BCCD5C2002AD19D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5932691D1BCCD5C2002AD19D /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
-		593269201BCCD5C2002AD19D /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5932691E1BCCD5C2002AD19D /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
-		596CCC6B1BDFD95000637DE5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596CCC6A1BDFD95000637DE5 /* ProfileViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		5932691F1BCCD5C2002AD19D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5932691D1BCCD5C2002AD19D /* FBSDKCoreKit.framework */; };
+		593269201BCCD5C2002AD19D /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5932691E1BCCD5C2002AD19D /* FBSDKLoginKit.framework */; };
+		596CCC6B1BDFD95000637DE5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596CCC6A1BDFD95000637DE5 /* ProfileViewController.swift */; };
 		D234D891560525C2897AC5E2 /* Pods_PhotorClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8BD15B983AA5E606588B0B2 /* Pods_PhotorClient.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		590BFDAC1C06DF6800E4BA0B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		590BFDB01C06E01E00E4BA0B /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		590BFDB41C07F05000E4BA0B /* AppSessionVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSessionVariables.swift; sourceTree = "<group>"; };
 		593268E41BCCD332002AD19D /* PhotorClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotorClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		593268E71BCCD332002AD19D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		593268E91BCCD332002AD19D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -114,7 +120,9 @@
 		593268E61BCCD332002AD19D /* PhotorClient */ = {
 			isa = PBXGroup;
 			children = (
+				590BFDAC1C06DF6800E4BA0B /* User.swift */,
 				593268E71BCCD332002AD19D /* AppDelegate.swift */,
+				590BFDB01C06E01E00E4BA0B /* SignUpViewController.swift */,
 				593268E91BCCD332002AD19D /* LoginViewController.swift */,
 				596CCC6A1BDFD95000637DE5 /* ProfileViewController.swift */,
 				593268EB1BCCD332002AD19D /* Main.storyboard */,
@@ -122,6 +130,7 @@
 				593268F31BCCD332002AD19D /* LaunchScreen.storyboard */,
 				593268F61BCCD332002AD19D /* Info.plist */,
 				593268EE1BCCD332002AD19D /* PhotorClient.xcdatamodeld */,
+				590BFDB41C07F05000E4BA0B /* AppSessionVariables.swift */,
 			);
 			path = PhotorClient;
 			sourceTree = "<group>";
@@ -344,9 +353,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				590BFDB11C06E01E00E4BA0B /* SignUpViewController.swift in Sources */,
 				593268EA1BCCD332002AD19D /* LoginViewController.swift in Sources */,
 				593268E81BCCD332002AD19D /* AppDelegate.swift in Sources */,
 				596CCC6B1BDFD95000637DE5 /* ProfileViewController.swift in Sources */,
+				590BFDB51C07F05000E4BA0B /* AppSessionVariables.swift in Sources */,
+				590BFDAD1C06DF6800E4BA0B /* User.swift in Sources */,
 				593268F01BCCD332002AD19D /* PhotorClient.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

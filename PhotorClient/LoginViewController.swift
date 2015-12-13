@@ -6,35 +6,43 @@
 //  Copyright © 27 Heisei Will Jackson. All rights reserved.
 //
 
-import UIKit
+import Alamofire
 import FBSDKCoreKit
 import FBSDKLoginKit
-import Alamofire
 import SwiftyJSON
+import UIKit
 
 class LoginViewController: UIViewController {
     let facebookReadPermissions = ["public_profile", "email", "user_friends"]
-    var activeUser: User?
     
-    @IBOutlet weak var facebookLoginButton: UIButton!
     override func viewDidAppear(animated: Bool) {
         super.viewDidLoad()
         if (FBSDKAccessToken.currentAccessToken() != nil) {
-            // Go to profile, already logged in
-            sendLoginRequestAndProcessResult(FBSDKAccessToken.currentAccessToken().userID, FBSDKAccessToken.currentAccessToken().tokenString)
-        }
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "showNew") {
-            if (activeUser != nil) {
-                let view = segue.destinationViewController as! ProfileViewController
-                view.activeUser = activeUser
+            Alamofire.request(.GET, "http://localhost:4567/checkUserSignedUp", parameters: AppSessionVariables.sharedInstance.user?.getSecurityHeaders(), headers: AppSessionVariables.sharedInstance.user?.getSecurityHeaders()).responseString() { response in
+                
+                if (response.result.value == "true") {
+                    self.sendLoginRequestAndProcessResult(FBSDKAccessToken.currentAccessToken().userID, FBSDKAccessToken.currentAccessToken().tokenString)
+                }
             }
         }
+        /*
+        else {
+            self.performSegueWithIdentifier("showSignUp", sender: self)
+        }
+        */
     }
     
-    @IBAction func doFacebookLogin(sender: UIButton) {
+    @IBAction func doSignUp(sender: UIButton) {
+        doFacebookLogin() {(_: String, _: String) in
+            self.performSegueWithIdentifier("showSignUp", sender: self)
+        }
+    }
+    
+    @IBAction func doLogin(sender: UIButton) {
+        doFacebookLogin(sendLoginRequestAndProcessResult);
+    }
+    
+    private func doFacebookLogin(callback: (String, String) -> Void) {
         FBSDKLoginManager().logInWithReadPermissions(self.facebookReadPermissions, handler: { (result:FBSDKLoginManagerLoginResult!, error:NSError!) -> Void in
             if (error != nil) {
                 FBSDKLoginManager().logOut();
@@ -45,28 +53,30 @@ class LoginViewController: UIViewController {
                 // TODO: (wbjacks) Handle cancellations
             }
             else {
-                self.sendLoginRequestAndProcessResult(result.token.userID, result.token.tokenString);
+                callback(result.token.userID, result.token.tokenString);
             }
         })
     }
     
     private func sendLoginRequestAndProcessResult(userId: String, _ token: String) {
         // TODO: (wjacks) assuming all permissions granted- maybe check them?
-        Alamofire.request(.GET, "http://localhost:4567/user/" + userId + "/login/" + token, headers: ["user_id": userId, "token": token]).responseJSON { response in
+        let data: [String:String] = ["user_id": userId, "token": token]
+        Alamofire.request(.POST, "http://localhost:4567/loginUser", headers: data, parameters: data, encoding:.JSON).responseJSON { response in
             if (response.result.isSuccess) {
                 if let data: AnyObject = response.result.value {
                     print("User " + userId + " logged in with token " + token);
                     // TODO: (wbjacks) SEC!! check encoding in BE
-                    self.activeUser = User(data: JSON(data))
+                    AppSessionVariables.sharedInstance.user = User(data: JSON(data))
                     self.performSegueWithIdentifier("showNew", sender: self);
                 }
             }
             else {
                 print("User failed to log in with error:" + response.result.error!.description);
-                // TODO: Error condition?
+                if (response.response?.statusCode == 401) {
+                    self.performSegueWithIdentifier("showSignUp", sender: self)
+                }
             }
         }
     }
-    
 }
 

@@ -17,23 +17,78 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="te5-no-gzb">
-                                <rect key="frame" x="61" y="407" width="136" height="30"/>
-                                <state key="normal" title="Login With Faceboo"/>
+                                <rect key="frame" x="86" y="407" width="144" height="30"/>
+                                <state key="normal" title="Login With Facebook"/>
                                 <connections>
-                                    <action selector="doFacebookLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="doc-FD-Ofs"/>
+                                    <action selector="doLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MOi-11-Y6R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xp-W9-NGx">
+                                <rect key="frame" x="287" y="407" width="55" height="30"/>
+                                <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="doSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JsM-CI-jhI"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="facebookLoginButton" destination="te5-no-gzb" id="fis-JS-ss7"/>
                         <segue destination="hsC-dp-jyp" kind="presentation" identifier="showNew" animates="NO" id="BSx-tW-zYD"/>
+                        <segue destination="KKv-tT-OGA" kind="presentation" identifier="showSignUp" id="6WH-gh-ZOq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="447" y="356"/>
+            <point key="canvasLocation" x="461" y="356"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="8mv-zS-6PQ">
+            <objects>
+                <viewController id="KKv-tT-OGA" customClass="SignUpViewController" customModule="PhotorClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2k1-dj-3bI"/>
+                        <viewControllerLayoutGuide type="bottom" id="AFt-z1-YCd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oFW-Rg-Xy4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Butts butts butts!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1f-ig-zvb">
+                                <rect key="frame" x="100" y="68" width="179" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your butt is:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fD4-UU-wDk">
+                                <rect key="frame" x="67" y="135" width="92" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EJK-0B-BFS">
+                                <rect key="frame" x="167" y="126" width="145" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drh-Ec-42y">
+                                <rect key="frame" x="160" y="195" width="59" height="30"/>
+                                <state key="normal" title="&quot;Butt&quot;on"/>
+                                <connections>
+                                    <action selector="sendSignUpRequest:" destination="KKv-tT-OGA" eventType="touchUpInside" id="FsQ-kx-DVx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="handleField" destination="EJK-0B-BFS" id="Q06-Io-989"/>
+                        <segue destination="hsC-dp-jyp" kind="presentation" identifier="showProfile" id="Axr-Yn-xWD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bNf-ik-FSW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1036" y="1201"/>
         </scene>
         <!--ProfileViewController-->
         <scene sceneID="uSu-ha-XGI">
@@ -56,7 +111,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Foo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gf9-cA-IhB">
                                 <rect key="frame" x="140" y="455" width="29" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYq-0P-ftf">
@@ -69,13 +124,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Handle:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5m-yB-zKJ">
                                 <rect key="frame" x="69" y="58" width="100" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="user handle goz hur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGJ-Hx-pVG">
                                 <rect key="frame" x="219" y="58" width="158" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Y1-My-myv">
@@ -94,7 +149,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0UC-sD-H8w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1180" y="356"/>
+            <point key="canvasLocation" x="1478" y="356"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="BSx-tW-zYD"/>
+    </inferredMetricsTieBreakers>
 </document>
