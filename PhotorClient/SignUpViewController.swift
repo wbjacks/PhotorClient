@@ -18,12 +18,14 @@ class SignUpViewController: UIViewController {
     
     @IBAction func sendSignUpRequest(sender: UIButton) {
         /* Repeated request... */
-        Alamofire.request(.POST, "http://localhost:4567/signUp/", headers: AppSessionVariables.sharedInstance.getSecurityHeaders()).responseJSON { response in
+        let facebookData:[String:String] = ["user_id": FBSDKAccessToken.currentAccessToken().userID, "token": FBSDKAccessToken.currentAccessToken().tokenString]
+        let payloadData: [String:String] = ["user_id": FBSDKAccessToken.currentAccessToken().userID, "token": FBSDKAccessToken.currentAccessToken().tokenString, "handle": handleField.text!]
+        Alamofire.request(.POST, "http://localhost:4567/signUp", headers: facebookData, parameters: payloadData, encoding:.JSON).responseJSON { response in
             if (response.result.isSuccess) {
                 if let data: AnyObject = response.result.value {
-                    print("User " + (AppSessionVariables.sharedInstance.user?.handle)! + " signed up.");
                     // TODO: (wbjacks) SEC!! check encoding in BE
                     AppSessionVariables.sharedInstance.user = User(data: JSON(data))
+                    print("User " + (AppSessionVariables.sharedInstance.user?.handle)! + " signed up.");
                     self.performSegueWithIdentifier("showProfile", sender: self);
                 }
             }

@@ -15,16 +15,34 @@ import UIKit
 class LoginViewController: UIViewController {
     let facebookReadPermissions = ["public_profile", "email", "user_friends"]
     
-    @IBOutlet weak var facebookLoginButton: UIButton!
     override func viewDidAppear(animated: Bool) {
         super.viewDidLoad()
         if (FBSDKAccessToken.currentAccessToken() != nil) {
-            // Go to profile, already logged in
-            sendLoginRequestAndProcessResult(FBSDKAccessToken.currentAccessToken().userID, FBSDKAccessToken.currentAccessToken().tokenString)
+            Alamofire.request(.GET, "http://localhost:4567/checkUserSignedUp", parameters: AppSessionVariables.sharedInstance.user?.getSecurityHeaders(), headers: AppSessionVariables.sharedInstance.user?.getSecurityHeaders()).responseString() { response in
+                
+                if (response.result.value == "true") {
+                    self.sendLoginRequestAndProcessResult(FBSDKAccessToken.currentAccessToken().userID, FBSDKAccessToken.currentAccessToken().tokenString)
+                }
+            }
+        }
+        /*
+        else {
+            self.performSegueWithIdentifier("showSignUp", sender: self)
+        }
+        */
+    }
+    
+    @IBAction func doSignUp(sender: UIButton) {
+        doFacebookLogin() {(_: String, _: String) in
+            self.performSegueWithIdentifier("showSignUp", sender: self)
         }
     }
     
-    @IBAction func doFacebookLogin(sender: UIButton) {
+    @IBAction func doLogin(sender: UIButton) {
+        doFacebookLogin(sendLoginRequestAndProcessResult);
+    }
+    
+    private func doFacebookLogin(callback: (String, String) -> Void) {
         FBSDKLoginManager().logInWithReadPermissions(self.facebookReadPermissions, handler: { (result:FBSDKLoginManagerLoginResult!, error:NSError!) -> Void in
             if (error != nil) {
                 FBSDKLoginManager().logOut();
@@ -35,14 +53,15 @@ class LoginViewController: UIViewController {
                 // TODO: (wbjacks) Handle cancellations
             }
             else {
-                self.sendLoginRequestAndProcessResult(result.token.userID, result.token.tokenString);
+                callback(result.token.userID, result.token.tokenString);
             }
         })
     }
     
     private func sendLoginRequestAndProcessResult(userId: String, _ token: String) {
         // TODO: (wjacks) assuming all permissions granted- maybe check them?
-        Alamofire.request(.POST, "http://localhost:4567/user/" + userId + "/login/" + token, headers: AppSessionVariables.sharedInstance.getSecurityHeaders()).responseJSON { response in
+        let data: [String:String] = ["user_id": userId, "token": token]
+        Alamofire.request(.POST, "http://localhost:4567/loginUser", headers: data, parameters: data, encoding:.JSON).responseJSON { response in
             if (response.result.isSuccess) {
                 if let data: AnyObject = response.result.value {
                     print("User " + userId + " logged in with token " + token);
@@ -57,6 +76,5 @@ class LoginViewController: UIViewController {
             }
         }
     }
-    
 }
 
